@@ -6,73 +6,158 @@
     <title>Fresh Basket Grocery</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Fresh Basket Grocery</h1>
-        <p>Your simple online grocery store</p>
+<body style="--brand: #2d6a4f; --brand-dark: #214f3c; --accent: #d68c22; --soft: #f6f7f2;">
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="index.html" style="letter-spacing: 0;">
+                <span class="logo-mark">FB</span>
+                <span>Fresh Basket Grocery</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#offers">Offers</a>
+                <a href="products.html">More Items</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#offers">Offers</a>
-        <a href="products.html">More Items</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
     <main id="home">
-        <section class="hero">
-            <h2>Fresh Groceries Delivered Daily</h2>
-            <p>Buy fruits, vegetables, dairy items, and snacks at low prices.</p>
-            <a class="button-link" href="products.html">Shop Now</a>
+        <section class="hero" style="border-top: 5px solid var(--brand);">
+            <div class="hero-copy">
+                <p class="section-kicker">Local grocery store</p>
+                <h1>Fresh items for everyday shopping.</h1>
+                <p>Buy fruits, vegetables, milk, rice, oil, snacks, and other daily items from one simple grocery page.</p>
+
+                <div class="hero-actions">
+                    <a class="button-link" href="products.html">See More Items</a>
+                    <a class="text-link" href="#contact">Contact Store</a>
+                </div>
+            </div>
+
+            <div class="hero-photo">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Fresh groceries arranged in a shop" style="object-position: center;">
+                <div class="hero-note" style="background-color: #fff8e8;">
+                    <strong>Store note</strong>
+                    <span>Open daily from 7:00 AM to 9:00 PM</span>
+                </div>
+            </div>
         </section>
 
-        <section id="products">
-            <h2>Our Products</h2>
-            <div class="product-list">
-                <article class="product">
-                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef4640b1?auto=format&fit=crop&w=500&q=80" alt="Fresh fruits">
-                    <h3>Fresh Fruits</h3>
-                    <p>Apples, bananas, oranges, and more.</p>
-                    <span>From Rs. 50</span>
+        <section class="banner-slider" aria-label="Store offers">
+            <div class="banner-track">
+                <article class="banner-slide" style="background-color: #fff8e8;">
+                    <div>
+                        <span>Morning offer</span>
+                        <h2>Fresh vegetables packed before 10 AM.</h2>
+                        <p>Good time to order tomatoes, onions, carrots, and leafy greens.</p>
+                    </div>
+                    <strong>10% off above Rs. 300</strong>
                 </article>
 
-                <article class="product">
-                    <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=500&q=80" alt="Fresh vegetables">
-                    <h3>Vegetables</h3>
-                    <p>Tomatoes, onions, carrots, and greens.</p>
-                    <span>From Rs. 30</span>
+                <article class="banner-slide" style="background-color: #edf6ef;">
+                    <div>
+                        <span>Fruit basket</span>
+                        <h2>Apples, bananas and oranges available today.</h2>
+                        <p>Add fruits with your daily grocery order for free local delivery.</p>
+                    </div>
+                    <strong>Free grapes with apples</strong>
                 </article>
 
-                <article class="product">
-                    <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=500&q=80" alt="Milk bottle">
-                    <h3>Dairy Items</h3>
-                    <p>Milk, curd, butter, and cheese.</p>
-                    <span>From Rs. 25</span>
+                <article class="banner-slide" style="background-color: #f1f3f5;">
+                    <div>
+                        <span>Pantry refill</span>
+                        <h2>Rice, oil, sugar and dal on the second page.</h2>
+                        <p>Check the extra items list before sending your order.</p>
+                    </div>
+                    <strong>See More Items</strong>
                 </article>
             </div>
         </section>
 
-        <section id="offers" class="offers">
-            <h2>Today Offers</h2>
-            <ul>
-                <li>Buy 1 kg apples and get 250 g grapes free.</li>
-                <li>Get 10% off on vegetables above Rs. 300.</li>
-                <li>Free delivery on orders above Rs. 500.</li>
-            </ul>
+        <section class="quick-info" aria-label="Store information">
+            <div>
+                <strong>Fresh stock</strong>
+                <span>Vegetables and fruits are checked every morning.</span>
+            </div>
+            <div>
+                <strong>Simple prices</strong>
+                <span>Basic items are listed clearly before ordering.</span>
+            </div>
+            <div>
+                <strong>Nearby delivery</strong>
+                <span>Orders above Rs. 500 can get free local delivery.</span>
+            </div>
         </section>
 
-        <aside>
-            <h2>Why Choose Us?</h2>
-            <ol>
-                <li>Fresh products</li>
-                <li>Low prices</li>
-                <li>Fast delivery</li>
-            </ol>
-        </aside>
+        <section id="products" class="section-block">
+            <div class="section-heading">
+                <p class="section-kicker">Main items</p>
+                <h2>Things people usually buy</h2>
+                <p>These are the common grocery groups available in the store.</p>
+            </div>
 
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
+            <div class="product-list">
+                <article class="product">
+                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef4640b1?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Fresh fruits">
+                    <div class="product-body">
+                        <span class="tag">Fruits</span>
+                        <h3>Apples, bananas and oranges</h3>
+                        <p>Seasonal fruits for snacks, juice, and lunch boxes.</p>
+                        <strong>From Rs. 50</strong>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Fresh vegetables">
+                    <div class="product-body">
+                        <span class="tag" style="background-color: #edf6ef; color: #2d6a4f;">Vegetables</span>
+                        <h3>Tomato, onion and greens</h3>
+                        <p>Daily cooking vegetables for breakfast, lunch, and dinner.</p>
+                        <strong>From Rs. 30</strong>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Milk and dairy items">
+                    <div class="product-body">
+                        <span class="tag">Dairy</span>
+                        <h3>Milk, curd and paneer</h3>
+                        <p>Simple dairy items for tea, breakfast, and home cooking.</p>
+                        <strong>From Rs. 25</strong>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="offers" class="offer-grid">
+            <article class="offer-card" style="border-left: 5px solid var(--accent);">
+                <p class="section-kicker">This week</p>
+                <h2>Small offers in the shop</h2>
+                <ul>
+                    <li>Free 250 g grapes with 1 kg apples.</li>
+                    <li>10% off on vegetables above Rs. 300.</li>
+                    <li>Free local delivery above Rs. 500.</li>
+                </ul>
+            </article>
+
+            <aside class="store-note-card">
+                <p class="section-kicker">Before ordering</p>
+                <h2>Check the extra items page too.</h2>
+                <p>Rice, flour, oil, sugar, dal, and tea powder are listed on the second page.</p>
+                <a class="text-link" href="products.html">Open More Items</a>
+            </aside>
+        </section>
+
+        <section id="contact" class="contact section-block">
+            <div class="section-heading">
+                <p class="section-kicker">Contact</p>
+                <h2>Ask about an item</h2>
+                <p>Send a message if you want to know whether an item is available today.</p>
+            </div>
+
             <form>
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="Enter your name">
@@ -83,7 +168,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" rows="4" placeholder="Write your message"></textarea>
 
-                <button type="submit">Send</button>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
