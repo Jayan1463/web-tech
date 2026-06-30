@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Grocery Items | Fresh Basket</title>
+    <meta name="description" content="More pantry, cooking, and daily care grocery items from Fresh Basket Grocery.">
+    <title>More Grocery Items | Fresh Basket Grocery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="--brand: #2d6a4f; --brand-dark: #214f3c; --accent: #d68c22; --soft: #f6f7f2;">
@@ -18,6 +19,7 @@
                 <a href="index.html">Home</a>
                 <a href="products.html">More Items</a>
                 <a href="#items">Price List</a>
+                <a href="#bundles">Bundles</a>
                 <a href="#order">Order Note</a>
             </div>
         </nav>
@@ -27,12 +29,12 @@
         <section class="hero hero-small" style="border-top: 5px solid var(--brand);">
             <div class="hero-copy">
                 <p class="section-kicker">More grocery items</p>
-                <h1>Pantry items and daily basics.</h1>
-                <p>This page keeps the extra grocery list separate from fruits, vegetables, and dairy items.</p>
+                <h1>Pantry items, cooking basics, and daily care.</h1>
+                <p>Use this page to check extra grocery items before returning to the home page for fresh fruits, vegetables, dairy, and registration.</p>
 
                 <div class="hero-actions">
                     <a class="button-link" href="#items">View Price List</a>
-                    <a class="text-link" href="index.html">Back to Home</a>
+                    <a class="text-link" href="index.html#dynamic-shop">Open Live List</a>
                 </div>
             </div>
 
@@ -54,6 +56,35 @@
                 <span>Daily care</span>
                 <strong>Soap, tissue, cleaners</strong>
             </article>
+        </section>
+
+        <section id="bundles" class="section-block">
+            <div class="section-heading">
+                <p class="section-kicker">Ready bundles</p>
+                <h2>Useful monthly grocery packs</h2>
+                <p>These example packs help customers choose commonly bought items faster.</p>
+            </div>
+
+            <div class="bundle-grid">
+                <article>
+                    <span class="tag">Family pack</span>
+                    <h3>Monthly staples</h3>
+                    <p>Rice, wheat flour, sugar, dal, tea powder, and cooking oil.</p>
+                    <strong>Approx. Rs. 525</strong>
+                </article>
+                <article>
+                    <span class="tag">Cooking pack</span>
+                    <h3>Kitchen refill</h3>
+                    <p>Cooking oil, toor dal, spices, salt, and basic masala items.</p>
+                    <strong>Approx. Rs. 390</strong>
+                </article>
+                <article>
+                    <span class="tag">Care pack</span>
+                    <h3>Daily cleaning</h3>
+                    <p>Soap, tissue, cleaner, dish wash, and other home care basics.</p>
+                    <strong>Approx. Rs. 260</strong>
+                </article>
+            </div>
         </section>
 
         <section id="items" class="section-block">
@@ -110,18 +141,51 @@
                             <td>Rs. 95</td>
                             <td><span class="stock">Limited</span></td>
                         </tr>
+                        <tr>
+                            <td>Dish Wash Liquid</td>
+                            <td>500 ml</td>
+                            <td>Rs. 85</td>
+                            <td><span class="stock">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>Bath Soap</td>
+                            <td>4 pieces</td>
+                            <td>Rs. 110</td>
+                            <td><span class="stock">Available</span></td>
+                        </tr>
+                        <tr>
+                            <td>Salt</td>
+                            <td>1 kg</td>
+                            <td>Rs. 25</td>
+                            <td><span class="stock">Available</span></td>
+                        </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <section class="service-band" aria-label="Store service promise">
+            <div>
+                <strong>Stock checked daily</strong>
+                <span>Prices and availability are updated based on local stock.</span>
+            </div>
+            <div>
+                <strong>Easy enquiry</strong>
+                <span>Return home and submit the registration form for confirmation.</span>
+            </div>
+            <div>
+                <strong>Local delivery</strong>
+                <span>Nearby delivery is available for larger orders.</span>
             </div>
         </section>
 
         <section id="order" class="order-note" style="border-left: 5px solid var(--brand);">
             <div>
                 <p class="section-kicker">Order note</p>
-                <h2>Add these with your fresh items.</h2>
-                <p>Use this page for pantry products, then return to the home page for fruits, vegetables, and dairy.</p>
+                <h2>Add pantry products with your fresh items.</h2>
+                <p>Use this page for extra groceries, then return to the home page to use the dynamic list, cart calculator, and registration form.</p>
             </div>
-            <a class="button-link" href="index.html">Back to Home</a>
+            <a class="button-link" href="index.html#contact">Register Enquiry</a>
         </section>
     </main>
 

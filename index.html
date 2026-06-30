@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Basket Grocery</title>
+    <meta name="description" content="Fresh Basket Grocery is a simple grocery website with offers, dynamic products, registration, and local delivery information.">
+    <title>Fresh Basket Grocery | Daily Fresh Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="--brand: #2d6a4f; --brand-dark: #214f3c; --accent: #d68c22; --soft: #f6f7f2;">
@@ -17,9 +18,10 @@
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#products">Products</a>
+                <a href="#dynamic-shop">Live List</a>
                 <a href="#offers">Offers</a>
+                <a href="#contact">Register</a>
                 <a href="products.html">More Items</a>
-                <a href="#contact">Contact</a>
             </div>
         </nav>
     </header>
@@ -28,12 +30,27 @@
         <section class="hero" style="border-top: 5px solid var(--brand);">
             <div class="hero-copy">
                 <p class="section-kicker">Local grocery store</p>
-                <h1>Fresh items for everyday shopping.</h1>
-                <p>Buy fruits, vegetables, milk, rice, oil, snacks, and other daily items from one simple grocery page.</p>
+                <h1>Fresh groceries delivered with care.</h1>
+                <p>Buy fruits, vegetables, milk, rice, oil, snacks, and daily home essentials from one clean and simple grocery website.</p>
+
+                <div class="hero-stats" aria-label="Store highlights">
+                    <div>
+                        <strong>7 AM</strong>
+                        <span>Fresh stock check</span>
+                    </div>
+                    <div>
+                        <strong>30+</strong>
+                        <span>Daily items</span>
+                    </div>
+                    <div>
+                        <strong>Rs. 500</strong>
+                        <span>Free delivery</span>
+                    </div>
+                </div>
 
                 <div class="hero-actions">
-                    <a class="button-link" href="products.html">See More Items</a>
-                    <a class="text-link" href="#contact">Contact Store</a>
+                    <a class="button-link" href="#dynamic-shop">Start Shopping</a>
+                    <a class="text-link" href="products.html">See More Items</a>
                 </div>
             </div>
 
@@ -75,6 +92,12 @@
                     <strong>See More Items</strong>
                 </article>
             </div>
+
+            <div class="slider-controls" aria-label="Offer slider controls">
+                <button type="button" class="slider-btn" id="prevSlide" aria-label="Previous offer">&lt;</button>
+                <div class="slider-dots" id="sliderDots" aria-label="Choose offer"></div>
+                <button type="button" class="slider-btn" id="nextSlide" aria-label="Next offer">&gt;</button>
+            </div>
         </section>
 
         <section class="quick-info" aria-label="Store information">
@@ -89,6 +112,64 @@
             <div>
                 <strong>Nearby delivery</strong>
                 <span>Orders above Rs. 500 can get free local delivery.</span>
+            </div>
+        </section>
+
+        <section id="dynamic-shop" class="section-block dynamic-shop">
+            <div class="section-heading">
+                <p class="section-kicker">JavaScript live section</p>
+                <h2>Today&apos;s live grocery list</h2>
+                <p id="welcomeMessage">Welcome to Fresh Basket Grocery.</p>
+            </div>
+
+            <div class="shop-tools">
+                <div>
+                    <label for="searchItem">Search item</label>
+                    <input type="search" id="searchItem" placeholder="Search apples, milk, rice...">
+                </div>
+                <div>
+                    <label for="categoryFilter">Filter items</label>
+                    <select id="categoryFilter">
+                        <option value="all">All categories</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Dairy">Dairy</option>
+                        <option value="Pantry">Pantry</option>
+                    </select>
+                </div>
+                <div class="tool-buttons">
+                    <button type="button" id="rememberName">Remember My Name</button>
+                    <button type="button" id="clearName" class="light-button">Clear Cookie</button>
+                </div>
+            </div>
+
+            <div class="dynamic-products" id="dynamicProducts" aria-live="polite"></div>
+            <p class="dynamic-count" id="productCount">Loading items...</p>
+
+            <div class="shopping-panel">
+                <div class="cart-summary">
+                    <div>
+                        <p class="section-kicker">Quick cart</p>
+                        <h3>Selected items</h3>
+                    </div>
+                    <ul id="cartList">
+                        <li>No items added yet.</li>
+                    </ul>
+                    <strong id="cartTotal">Cart total: Rs. 0</strong>
+                    <button type="button" id="clearCart" class="light-button">Clear Cart</button>
+                </div>
+
+                <div class="total-box">
+                    <div>
+                        <label for="itemSelect">Choose item for total</label>
+                        <select id="itemSelect"></select>
+                    </div>
+                    <div>
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" min="1" max="20" value="1">
+                    </div>
+                    <p id="orderTotal">Select an item to calculate the total.</p>
+                </div>
             </div>
         </section>
 
@@ -132,6 +213,31 @@
             </div>
         </section>
 
+        <section class="process section-block" aria-label="Shopping process">
+            <div class="section-heading">
+                <p class="section-kicker">How it works</p>
+                <h2>Simple shopping in three steps</h2>
+            </div>
+
+            <div class="process-grid">
+                <article>
+                    <span>1</span>
+                    <h3>Choose items</h3>
+                    <p>Use the live list, search box, or price list to choose groceries.</p>
+                </article>
+                <article>
+                    <span>2</span>
+                    <h3>Register enquiry</h3>
+                    <p>Fill the form and generate your registration number.</p>
+                </article>
+                <article>
+                    <span>3</span>
+                    <h3>Collect or deliver</h3>
+                    <p>The store confirms stock and prepares pickup or local delivery.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="offers" class="offer-grid">
             <article class="offer-card" style="border-left: 5px solid var(--accent);">
                 <p class="section-kicker">This week</p>
@@ -151,30 +257,77 @@
             </aside>
         </section>
 
+        <section class="review-strip" aria-label="Customer reviews">
+            <article>
+                <strong>Clean price list</strong>
+                <p>Easy to check daily groceries without confusion.</p>
+            </article>
+            <article>
+                <strong>Fast response</strong>
+                <p>The registration number makes follow-up simple.</p>
+            </article>
+            <article>
+                <strong>Good local store</strong>
+                <p>Fresh vegetables and pantry items in one place.</p>
+            </article>
+        </section>
+
         <section id="contact" class="contact section-block">
             <div class="section-heading">
                 <p class="section-kicker">Contact</p>
                 <h2>Ask about an item</h2>
-                <p>Send a message if you want to know whether an item is available today.</p>
+                <p>Register your enquiry and the store will confirm availability today.</p>
             </div>
 
-            <form>
+            <form id="registrationForm" novalidate>
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="Enter your name">
+                <span class="error-message" id="nameError"></span>
 
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Enter your email">
+                <span class="error-message" id="emailError"></span>
+
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" placeholder="Enter 10 digit phone number">
+                <span class="error-message" id="phoneError"></span>
+
+                <label for="registrationNumber">Registration number</label>
+                <div class="registration-row">
+                    <input type="text" id="registrationNumber" placeholder="Click generate" readonly>
+                    <button type="button" id="generateRegNo">Generate Number</button>
+                </div>
+                <span class="error-message" id="registrationNumberError"></span>
+
+                <label for="interest">Interested category</label>
+                <select id="interest">
+                    <option value="">Select one category</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Pantry">Pantry</option>
+                </select>
+                <span class="error-message" id="interestError"></span>
 
                 <label for="message">Message</label>
-                <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+                <textarea id="message" rows="4" placeholder="Write at least 10 characters"></textarea>
+                <span class="error-message" id="messageError"></span>
 
-                <button type="submit">Send Message</button>
+                <label class="checkbox-row" for="agreeTerms">
+                    <input type="checkbox" id="agreeTerms">
+                    <span>I agree that the store can contact me about this enquiry.</span>
+                </label>
+                <span class="error-message" id="agreeTermsError"></span>
+
+                <button type="submit">Submit Registration</button>
+                <p class="form-result" id="formResult" aria-live="polite"></p>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Idhu namma kalam kabila.</p>
+        <p> Idhu namma kalam kabila.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
