@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products>
+
+    <product id="1">
+
+        <name>Tomato</name>
+
+        <category>Vegetables</category>
+
+        <price>40</price>
+
+        <rating>4.5</rating>
+
+        <stock>100</stock>
+
+    </product>
+
+
+    <product id="2">
+
+        <name>Apple</name>
+
+        <category>Fruits</category>
+
+        <price>180</price>
+
+        <rating>4.8</rating>
+
+        <stock>50</stock>
+
+    </product>
+
+
+    <product id="3">
+
+        <name>Milk</name>
+
+        <category>Dairy</category>
+
+        <price>60</price>
+
+        <rating>3.5</rating>
+
+        <stock>80</stock>
+
+    </product>
+
+
+    <product id="4">
+
+        <name>Basmati Rice</name>
+
+        <category>Staples</category>
+
+        <price>120</price>
+
+        <rating>4.6</rating>
+
+        <stock>100</stock>
+
+    </product>
+
+</products>

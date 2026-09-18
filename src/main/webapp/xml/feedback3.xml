@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE feedbacks SYSTEM "feedback3.dtd">
+
+<feedbacks>
+
+    <feedback>
+
+        <name>Arun</name>
+
+        <rating>5</rating>
+
+        <comment>
+            Excellent grocery service.
+        </comment>
+
+    </feedback>
+
+    <feedback>
+
+        <name>Priya</name>
+
+        <rating>4</rating>
+
+        <comment>
+            Good delivery experience.
+        </comment>
+
+    </feedback>
+
+    <feedback>
+
+        <name>Rahul</name>
+
+        <rating>2</rating>
+
+        <comment>
+            Delivery was delayed.
+        </comment>
+
+    </feedback>
+
+</feedbacks>

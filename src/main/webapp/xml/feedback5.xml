@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<feedbacks>
+
+    <feedback id="1">
+
+        <name>Arun</name>
+
+        <email>arun@gmail.com</email>
+
+        <rating>5</rating>
+
+        <category>Delivery</category>
+
+        <comment>
+            Very fast delivery and good packaging.
+        </comment>
+
+    </feedback>
+
+    <feedback id="2">
+
+        <name>Priya</name>
+
+        <email>priya@gmail.com</email>
+
+        <rating>3</rating>
+
+        <category>Products</category>
+
+        <comment>
+            Product quality was average.
+        </comment>
+
+    </feedback>
+
+    <feedback id="3">
+
+        <name>Rahul</name>
+
+        <email>rahul@gmail.com</email>
+
+        <rating>4</rating>
+
+        <category>Website</category>
+
+        <comment>
+            Website is easy to use.
+        </comment>
+
+    </feedback>
+
+</feedbacks>

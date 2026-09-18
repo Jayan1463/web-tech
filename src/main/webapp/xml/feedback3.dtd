@@ -1,0 +1,10 @@
+<!ELEMENT feedbacks (feedback+)>
+
+<!ELEMENT feedback
+    (name, rating, comment)>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT rating (#PCDATA)>
+
+<!ELEMENT comment (#PCDATA)>
