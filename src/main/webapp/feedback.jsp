@@ -6,7 +6,7 @@
     <title>Feedback - GroceryHub</title>
 
     <link rel="stylesheet"
-          href="style.css?v=3">
+          href="style.css?v=4">
 
 </head>
 

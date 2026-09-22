@@ -345,20 +345,11 @@ button:active {
 
     font-size: 42px;
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background 0.2s ease;
+    transition: none;
 }
 
 .category-card:hover {
-    background: #ffffff;
-
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 10px 30px
-        rgba(0, 0, 0, 0.08);
+    background: #f5f5f5;
 }
 
 .category-card h3 {
@@ -450,6 +441,12 @@ button:active {
     border: 1px solid #e1e1e1;
 
     border-radius: 10px;
+
+    box-shadow: none;
+
+    transform: none;
+
+    transition: none;
 }
 
 .features h3 {
@@ -622,17 +619,13 @@ button:active {
 
     border-radius: 12px;
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    box-shadow: none;
+
+    transition: none;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.08);
+    box-shadow: none;
 }
 
 .product-image {

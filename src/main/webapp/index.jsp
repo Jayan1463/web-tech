@@ -9,7 +9,7 @@
 
     <title>GroceryHub - Fresh Groceries</title>
 
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <script src="app.js" defer></script>
 </head>
 
