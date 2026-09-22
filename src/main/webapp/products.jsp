@@ -43,6 +43,7 @@
 
         <input
             type="text"
+            id="search"
             name="search"
             placeholder="Search groceries...">
 
