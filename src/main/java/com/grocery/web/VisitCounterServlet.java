@@ -47,6 +47,10 @@ public class VisitCounterServlet extends HttpServlet {
                 String.valueOf(count)
             );
 
+        visitCookie.setPath(
+                request.getContextPath()
+        );
+
         visitCookie.setMaxAge(
                 60 * 60 * 24 * 30
         );

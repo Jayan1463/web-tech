@@ -86,7 +86,8 @@
     <div class="category-grid">
 
         <a href="products?category=Vegetables"
-           class="category-card">
+           class="category-card"
+           data-testid="category-vegetables">
             <span class="category-photo category-photo--Vegetables"
                   aria-hidden="true"></span>
             <h3>Vegetables</h3>
@@ -186,7 +187,8 @@
     </a>
 
     <a href="deleteCookie"
-       class="small-btn secondary">
+       class="small-btn secondary"
+       data-testid="reset-visit-counter">
         Reset Visit Counter
     </a>
 

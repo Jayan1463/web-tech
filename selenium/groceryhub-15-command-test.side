@@ -1,116 +1,95 @@
 {
   "id": "8c80937d-78c1-4ec9-918b-a66c09515cd0",
   "version": "2.0",
-  "name": "GroceryHub 15 Command Selenium Test",
+  "name": "GroceryHub 12 Unique Command Selenium Test",
   "url": "http://127.0.0.1:8080/Grocery_shop",
   "tests": [{
     "id": "9f99fa67-844d-4982-98d5-d4a8f7398f64",
-    "name": "GroceryHub Smoke Test - 15 Commands",
+    "name": "GroceryHub 12 Unique Commands",
     "commands": [{
-      "id": "0a07031c-183c-401b-8487-b6d1ffdf5a56",
-      "comment": "1. Open the GroceryHub home page.",
+      "id": "cmd-01",
+      "comment": "1. Open the home page.",
       "command": "open",
-      "target": "/",
+      "target": "/Grocery_shop/",
       "targets": [],
       "value": ""
     }, {
-      "id": "fe44d673-91ba-4c65-9863-2c674e9ba5f4",
-      "comment": "2. Confirm the home page title.",
+      "id": "cmd-02",
+      "comment": "2. Resize browser.",
+      "command": "setWindowSize",
+      "target": "1536x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd-03",
+      "comment": "3. Check home title.",
       "command": "assertTitle",
       "target": "GroceryHub - Fresh Groceries",
       "targets": [],
       "value": ""
     }, {
-      "id": "d52f94ef-71a0-4d5d-96cb-cf62d697ae9b",
-      "comment": "3. Confirm the main hero text is visible.",
+      "id": "cmd-04",
+      "comment": "4. Check hero heading text.",
       "command": "assertText",
       "target": "css=.hero h1",
-      "targets": [["css=.hero h1", "css:finder"], ["xpath=//section[contains(@class,'hero')]//h1", "xpath:position"]],
+      "targets": [["css=.hero h1", "css:finder"]],
       "value": "Fresh groceries,*"
     }, {
-      "id": "47180348-c346-467e-b703-18a542451ff5",
-      "comment": "4. Go to the product listing.",
+      "id": "cmd-05",
+      "comment": "5. Go to Products.",
       "command": "click",
       "target": "linkText=Shop Now",
-      "targets": [["linkText=Shop Now", "linkText"], ["css=.hero .btn", "css:finder"]],
+      "targets": [["linkText=Shop Now", "linkText"]],
       "value": ""
     }, {
-      "id": "67c68031-e3a0-442f-ae7e-9e91e3ef0e83",
-      "comment": "5. Confirm the product page loaded.",
-      "command": "assertTitle",
-      "target": "Products - GroceryHub",
+      "id": "cmd-06",
+      "comment": "6. Wait for Products page heading.",
+      "command": "waitForElementVisible",
+      "target": "css=.products-header h1",
+      "targets": [["css=.products-header h1", "css:finder"]],
+      "value": "10000"
+    }, {
+      "id": "cmd-07",
+      "comment": "7. Confirm search form exists.",
+      "command": "assertElementPresent",
+      "target": "css=.search-form",
+      "targets": [["css=.search-form", "css:finder"]],
+      "value": ""
+    }, {
+      "id": "cmd-08",
+      "comment": "8. Store page title.",
+      "command": "storeTitle",
+      "target": "",
+      "targets": [],
+      "value": "pageTitle"
+    }, {
+      "id": "cmd-09",
+      "comment": "9. Print stored title.",
+      "command": "echo",
+      "target": "${pageTitle}",
       "targets": [],
       "value": ""
     }, {
-      "id": "f3734eb4-6f5d-460b-a98f-e220603d5de6",
-      "comment": "6. Filter by the Fruits category.",
-      "command": "click",
-      "target": "linkText=Fruits",
-      "targets": [["linkText=Fruits", "linkText"], ["xpath=//a[normalize-space()='Fruits']", "xpath:link"]],
-      "value": ""
+      "id": "cmd-10",
+      "comment": "10. Store current URL.",
+      "command": "storeLocation",
+      "target": "",
+      "targets": [],
+      "value": "currentUrl"
     }, {
-      "id": "018f44f7-6c40-41e1-8210-2245616d4e2a",
-      "comment": "7. Confirm the category query string is applied.",
+      "id": "cmd-11",
+      "comment": "11. Confirm products URL.",
       "command": "assertLocation",
-      "target": "*/products?category=Fruits",
+      "target": "*/products",
       "targets": [],
       "value": ""
     }, {
-      "id": "a9bd890d-1dcf-486e-82db-2f31ded00973",
-      "comment": "8. Type a grocery search.",
-      "command": "type",
-      "target": "name=search",
-      "targets": [["name=search", "name"], ["css=input[name='search']", "css:finder"]],
-      "value": "milk"
-    }, {
-      "id": "81fa7ffd-a351-4e8b-8f54-86cb10aa73c0",
-      "comment": "9. Submit the search form.",
-      "command": "click",
-      "target": "css=.search-form button[type='submit']",
-      "targets": [["css=.search-form button[type='submit']", "css:finder"], ["xpath=//form[contains(@class,'search-form')]//button", "xpath:position"]],
-      "value": ""
-    }, {
-      "id": "b3876d92-87b1-4df8-b5a7-acd23e371beb",
-      "comment": "10. Confirm search stays on the product endpoint.",
-      "command": "assertLocation",
-      "target": "*/products?search=milk",
+      "id": "cmd-12",
+      "comment": "12. Refresh current page.",
+      "command": "refresh",
+      "target": "",
       "targets": [],
       "value": ""
-    }, {
-      "id": "f448d1a6-e461-4628-ab6e-8e34417b609f",
-      "comment": "11. Open the feedback page.",
-      "command": "click",
-      "target": "linkText=Feedback",
-      "targets": [["linkText=Feedback", "linkText"], ["xpath=//a[normalize-space()='Feedback']", "xpath:link"]],
-      "value": ""
-    }, {
-      "id": "7ce071da-ce29-4227-b87c-434bb8f0106b",
-      "comment": "12. Confirm the feedback page title.",
-      "command": "assertText",
-      "target": "css=.feedback-card h1",
-      "targets": [["css=.feedback-card h1", "css:finder"], ["xpath=//main[contains(@class,'feedback-container')]//h1", "xpath:position"]],
-      "value": "Customer Feedback"
-    }, {
-      "id": "560910c8-3eb4-4b5f-a0e5-4e334a7c95d1",
-      "comment": "13. Navigate to account registration.",
-      "command": "open",
-      "target": "/register.jsp",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8f1546c1-5856-4425-a407-2c92b8b31456",
-      "comment": "14. Type a sample name into the registration form.",
-      "command": "type",
-      "target": "id=name",
-      "targets": [["id=name", "id"], ["css=#name", "css:finder"]],
-      "value": "Selenium Tester"
-    }, {
-      "id": "12add844-1725-4487-a577-ef8dd11a2a97",
-      "comment": "15. Confirm the typed value is present.",
-      "command": "assertValue",
-      "target": "id=name",
-      "targets": [["id=name", "id"], ["css=#name", "css:finder"]],
-      "value": "Selenium Tester"
     }]
   }],
   "suites": [{

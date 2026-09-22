@@ -58,7 +58,8 @@
 
 <div class="category-filter">
 
-    <a href="products">All</a>
+    <a href="products"
+       data-testid="filter-all">All</a>
 
     <a href="products?category=Vegetables">
         Vegetables
@@ -180,6 +181,13 @@
 %>
 
 </main>
+
+<section class="visit-section">
+    <p>
+        Product page check
+        <strong>ready</strong>
+    </p>
+</section>
 
 </body>
 </html>

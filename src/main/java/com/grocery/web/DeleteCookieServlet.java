@@ -23,6 +23,10 @@ public class DeleteCookieServlet
         Cookie cookie =
                 new Cookie("visitCount", "");
 
+        cookie.setPath(
+                request.getContextPath()
+        );
+
         cookie.setMaxAge(0);
 
         response.addCookie(cookie);
