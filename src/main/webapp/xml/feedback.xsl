@@ -13,7 +13,7 @@
     <xsl:param name="xpathMatches"/>
     <xsl:param name="showHighRatings" select="'false'"/>
 
-    <xsl:template match="/">
+    <xsl:template match="/"> //root node
 
         <html>
 
