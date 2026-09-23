@@ -45,6 +45,17 @@
                     color: white;
                 }
 
+                .back-button {
+                    background: #111;
+                    border: 0;
+                    border-radius: 6px;
+                    color: white;
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-top: 20px;
+                    padding: 12px 16px;
+                }
+
             </style>
 
         </head>
@@ -130,6 +141,13 @@
                 </xsl:for-each>
 
             </table>
+
+            <button
+                type="button"
+                class="back-button"
+                onclick="window.history.back();">
+                Go Back
+            </button>
 
         </body>
 

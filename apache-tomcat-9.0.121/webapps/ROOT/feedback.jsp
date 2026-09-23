@@ -146,6 +146,12 @@
             <a class="small-btn" href="xml-report?source=feedback5">XSD 5-Field Summary</a>
             <a class="small-btn" href="xml-report?source=feedback5-high">XPath Ratings Above 3</a>
             <a class="small-btn" href="xml-report?source=products">Product XML Summary</a>
+            <button
+                type="button"
+                class="small-btn secondary"
+                onclick="if (window.history.length > 1) { window.history.back(); } else { window.location.href = 'feedback.jsp'; }">
+                Go Back
+            </button>
         </section>
 
     </div>

@@ -17,6 +17,11 @@ CREATE TABLE IF NOT EXISTS users (
         DEFAULT CURRENT_TIMESTAMP
 );
 
+INSERT INTO users (name, email, password)
+VALUES
+    ('Admin', 'admin@groceryhub.com', 'admin123'),
+    ('Demo User', 'user@groceryhub.com', 'user123');
+
 
 CREATE TABLE IF NOT EXISTS products (
 
