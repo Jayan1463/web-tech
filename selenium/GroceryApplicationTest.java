@@ -9,7 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,9 +17,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class GroceryApplicationTest {
 
     public static void main(String[] args) {
-        WebDriver driver = new SafariDriver();
+        WebDriver driver = new FirefoxDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        String targetUrl = "http://127.0.0.1:8080/Grocery_shop/";
+        String targetUrl = "http://127.0.0.1:8080/";
 
         try {
             System.out.println("--- Module A: Browser Basics ---");

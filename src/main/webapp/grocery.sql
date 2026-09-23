@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS grocerydb;
+CREATE DATABASE IF NOT EXISTS jayan_grocery;
 
-USE grocerydb;
+USE jayan_grocery;
 
 
 CREATE TABLE IF NOT EXISTS users (
@@ -16,6 +16,11 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP
         DEFAULT CURRENT_TIMESTAMP
 );
+
+INSERT INTO users (name, email, password)
+VALUES
+    ('Admin', 'admin@groceryhub.com', 'admin123'),
+    ('Demo User', 'user@groceryhub.com', 'user123');
 
 
 CREATE TABLE IF NOT EXISTS products (
@@ -34,6 +39,14 @@ CREATE TABLE IF NOT EXISTS products (
 
     image VARCHAR(255)
 );
+
+INSERT INTO products
+    (name, category, description, price, stock, image)
+VALUES
+    ('Fresh Organic Bananas', 'Fruits', 'Fresh organic bananas', 45.00, 100,
+     'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+    ('Whole Wheat Bread', 'Bakery', 'Whole wheat bread', 40.00, 100,
+     'https://images.unsplash.com/photo-1586765501019-cbe3973ef8fa?q=80&w=868&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 
 
 CREATE TABLE IF NOT EXISTS orders (

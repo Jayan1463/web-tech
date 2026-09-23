@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS grocerydb;
+CREATE DATABASE IF NOT EXISTS jayan_grocery;
 
-USE grocerydb;
+USE jayan_grocery;
 
 
 DROP USER IF EXISTS
@@ -13,7 +13,7 @@ IDENTIFIED BY 'grocery123';
 
 
 GRANT ALL PRIVILEGES
-ON grocerydb.*
+ON jayan_grocery.*
 TO 'groceryuser'@'%';
 
 
