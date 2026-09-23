@@ -1,0 +1,79 @@
+CREATE DATABASE IF NOT EXISTS grocerydb;
+
+USE grocerydb;
+
+
+CREATE TABLE IF NOT EXISTS users (
+
+    id INT PRIMARY KEY AUTO_INCREMENT,
+
+    name VARCHAR(100) NOT NULL,
+
+    email VARCHAR(150) NOT NULL UNIQUE,
+
+    password VARCHAR(255) NOT NULL,
+
+    created_at TIMESTAMP
+        DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE IF NOT EXISTS products (
+
+    id INT PRIMARY KEY AUTO_INCREMENT,
+
+    name VARCHAR(100) NOT NULL,
+
+    category VARCHAR(50) NOT NULL,
+
+    description VARCHAR(500),
+
+    price DECIMAL(10,2) NOT NULL,
+
+    stock INT NOT NULL DEFAULT 0,
+
+    image VARCHAR(255)
+);
+
+
+CREATE TABLE IF NOT EXISTS orders (
+
+    id INT PRIMARY KEY AUTO_INCREMENT,
+
+    user_id INT NOT NULL,
+
+    total DECIMAL(10,2) NOT NULL,
+
+    status VARCHAR(50)
+        DEFAULT 'PLACED',
+
+    address VARCHAR(500),
+
+    payment_method VARCHAR(50),
+
+    order_date TIMESTAMP
+        DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (user_id)
+        REFERENCES users(id)
+);
+
+
+CREATE TABLE IF NOT EXISTS order_items (
+
+    id INT PRIMARY KEY AUTO_INCREMENT,
+
+    order_id INT NOT NULL,
+
+    product_id INT NOT NULL,
+
+    quantity INT NOT NULL,
+
+    price DECIMAL(10,2) NOT NULL,
+
+    FOREIGN KEY (order_id)
+        REFERENCES orders(id),
+
+    FOREIGN KEY (product_id)
+        REFERENCES products(id)
+);
